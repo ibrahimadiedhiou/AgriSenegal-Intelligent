@@ -1,0 +1,28 @@
+# AgriSénégal Intelligent
+
+## Installation Windows / Anaconda
+
+```bash
+conda create -n agrisenegal python=3.11 -y
+conda activate agrisenegal
+python -m pip install -r requirements.txt
+streamlit run application_agricole_senegal.py
+```
+
+## Modules
+1. Territoires : 14 régions, profil agroécologique, saisie de commune et carte schématique.
+2. Sols : pH, conductivité, matière organique, qualité de l'eau, drainage.
+3. Cultures : choix des cultures et modification des rendements, prix, coûts, eau et travail.
+4. Installations : sélection des équipements, CAPEX, amortissement et maintenance.
+5. Optimisation : allocation de surface entre cultures, maximisation de marge sous contraintes de surface, eau et travail.
+6. Conseils et données : conseils conditionnels et import CSV communal avec coordonnées.
+
+## Données
+Les profils régionaux sont des orientations qualitatives de départ. Les données communales exactes,
+les rendements, prix, coûts, sols et installations doivent être importés ou renseignés à partir de
+sources vérifiées (services agricoles, analyses de laboratoire, devis et relevés de terrain).
+Le modèle CSV communal fourni dans l'application est une structure vierge à compléter.
+
+Les prix, rendements, besoins en eau et coûts initiaux du prototype sont des hypothèses
+pédagogiques modifiables, non des références statistiques officielles. L'optimisation donne
+un optimum conditionnel aux paramètres saisis et ne remplace pas l'avis d'un agronome.
